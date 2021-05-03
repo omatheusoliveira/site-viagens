@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	width: 100vw;
+	overflow-x: hidden;
+}
+
+header {
+	height: calc(100vh - 150px);
+	background: no-repeat center/cover url('assets/header-image.jpg');
+}
+
+.header-content {
+	max-width: 400px;
+	margin: 150px auto;
+	text-align: center;
+}
+
+.header-content h1 {
+	margin-bottom: 10px;
+	font-size: 4rem;
+}
+
+header nav {
+	display: flex;
+	justify-content: space-between;
+	margin: auto 30px;
+}
+
+header nav p {
+	font-weight: bold;
+}
+
+header nav ul {
+	list-style: none;
+	display: flex;
+	cursor: pointer;
+}
+
+header nav li {
+	margin: 0 15px;
+}
+
+button {
+	padding: 10px 15px;
+	border-radius: 8px;
+	font-weight: bold;
+	border: 0;
+	background: #762a2e;
+	color: white;
+	font-family: 'Montserrat', sans-serif;
+	cursor: pointer;
+}
+
+.pacotes {
+	background: #DEE4F8;
+	padding: 15px;
+}
+
+.pacotes .pacotes-cards{
+	display: flex;
+	max-width: 950px;
+	margin: auto;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.pacotes .pacote-title{
+	width: 100%;
+	text-align: center;
+	margin: 25px 0;
+
+}
+
+.pacotes .card {
+	width: 250px;
+	height: 350px;
+	background: white;
+	border-radius: 24px 0px;
+	margin: 25px;
+	position: relative;
+}
+
+.pacotes .card-content h1{
+	margin-bottom: 0;
+	font-size: 1rem;
+	text-align: center;
+
+}
+
+.pacotes .card-content {
+	padding: 0 15px;
+}
+
+.pacotes .card-image {
+	width: 250px;
+	height: 200px;
+	border-radius: 24px 0 0 0;
+	object-fit: cover;
+}
+
+.pacotes .card-content ul {
+	display: flex;
+	flex-direction: column;
+	list-style: none;
+	padding: 0px;
+}
+
+.pacotes .card-content ul li {
+	font-size: .7rem;
+	display: flex;
+	align-items: center;
+	margin: 3px 0;
+	color: gray;
+	font-weight: bold;
+}
+
+.pacotes .card-content ul li svg {
+	width: 16px;
+	height: 16px;
+	margin-right: 10px;
+}
+
+.pacotes .card .card-tag-top{
+	position: absolute;
+	right: 0;
+	top: 15px;
+	background: #f19839;
+	border-radius: 8px 0 0 8px;
+	padding: 5px 10px;
+}
+.pacotes .card .card-tag-bottom {
+	position: absolute;
+	left: 0;
+	top: 160px;
+	background: #1d61dd;
+	border-radius: 0 8px 8px 0;
+	padding: 5px 10px;
+
+}
+
+.pacotes .card .card-tag p {
+	margin: 0;
+	font-size: .8rem;
+	color: white;
+	font-weight: bold;
+}
+
+/* Responsividade */
+
+/* Tablets */
+
+@media (max-width: 767px) {}
+
+/* Celular e afins */
+
+@media (max-width: 480px) {
+	body {
+		margin-bottom: 55px;
+	}
+	header nav ul {
+		position: fixed;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+
+		z-index: 100;
+
+		background: #1d61dd;
+		color: white;
+		font-weight: bold;
+		height: 55px;
+
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	header nav p {
+		width: 100%;
+		text-align: center;
+	}
+}
