@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
-
 * {
 	box-sizing: border-box;
 }
@@ -63,7 +62,7 @@ button {
 	padding: 15px;
 }
 
-.pacotes .pacotes-cards{
+.pacotes .pacotes-cards {
 	display: flex;
 	max-width: 950px;
 	margin: auto;
@@ -71,11 +70,10 @@ button {
 	justify-content: center;
 }
 
-.pacotes .pacote-title{
+.pacotes .pacote-title {
 	width: 100%;
 	text-align: center;
 	margin: 25px 0;
-
 }
 
 .pacotes .card {
@@ -87,11 +85,10 @@ button {
 	position: relative;
 }
 
-.pacotes .card-content h1{
+.pacotes .card-content h1 {
 	margin-bottom: 0;
 	font-size: 1rem;
 	text-align: center;
-
 }
 
 .pacotes .card-content {
@@ -127,7 +124,7 @@ button {
 	margin-right: 10px;
 }
 
-.pacotes .card .card-tag-top{
+.pacotes .card .card-tag-top {
 	position: absolute;
 	right: 0;
 	top: 15px;
@@ -135,6 +132,7 @@ button {
 	border-radius: 8px 0 0 8px;
 	padding: 5px 10px;
 }
+
 .pacotes .card .card-tag-bottom {
 	position: absolute;
 	left: 0;
@@ -142,7 +140,6 @@ button {
 	background: #1d61dd;
 	border-radius: 0 8px 8px 0;
 	padding: 5px 10px;
-
 }
 
 .pacotes .card .card-tag p {
@@ -150,6 +147,64 @@ button {
 	font-size: .8rem;
 	color: white;
 	font-weight: bold;
+}
+
+.servicos {
+	padding: 15px;
+}
+
+.servicos .servicos-title {
+	text-align: center;
+	margin: 35px 0;
+}
+
+.servicos .servicos-cards {
+	margin-top: 25px;
+	display: flex;
+	max-width: 950px;
+	justify-content: center;
+	margin: auto;
+	flex-wrap: wrap;
+}
+
+.servicos .card {
+	width: 250px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin: 0 20px;
+}
+
+.servicos .card svg {
+	width: 60px;
+	height: 60px;
+	margin: 50px;
+	transition: all 1s;
+}
+
+.servicos .card svg:hover {
+	stroke: #1d61dd;
+	transform: scale(1.1);
+}
+
+.servicos .card h3 {
+	font-weight: bold;
+}
+
+.servicos .card p {
+	color: gray;
+	font-size: .8rem;
+	text-align: center;
+}
+
+.servicos .card .card-content {
+	height: 180px;
+	text-align: center;
+}
+
+.servicos button {
+	background: #1d61dd;
 }
 
 /* Responsividade */
@@ -171,14 +226,11 @@ button {
 		width: 100%;
 		padding: 0;
 		margin: 0;
-
 		z-index: 100;
-
 		background: #1d61dd;
 		color: white;
 		font-weight: bold;
 		height: 55px;
-
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
