@@ -15,13 +15,13 @@
 		<nav>
 			<p>Project Fuji</p>
 			<ul>
-				<li>Home</li>
-				<li>Pacotes</li>
-				<li>Serviços</li>
-				<li>Contato</li>
+				<li><a href="#home">Home</a></li>
+				<li><a href="#pacotes">Pacotes</a></li>
+				<li><a href="#servicos">Serviços</a></li>
+				<li><a href="#contato">Contato</a></li>
 			</ul>
 		</nav>
-		<div class="header-content">
+		<div id="home" class="header-content">
 			<h1>Monte Fuji</h1>
 			<p>O monte Fuji é a mais alta montanha da ilha de Honshu e de todo o arquipélago japonês. É um vulcão ativo,
 				porém de baixo risco de erupção. O monte Fuji localiza-se a oeste de Tóquio próximo da costa do oceano
@@ -30,7 +30,7 @@
 		</div>
 	</header>
 
-	<section class="pacotes">
+	<section id="pacotes" class="pacotes">
 		<h1 class="pacote-title">Conheca nossos pacotes</h1>
 		<div class="pacotes-cards">
 			<div class="card">
@@ -99,7 +99,7 @@
 
 	</section>
 
-	<section class="servicos">
+	<section id="servicos" class="servicos">
 		<h1 class="servicos-title">Serviços</h1>
 		<div class="servicos-cards">
 			<div class="card">
@@ -138,9 +138,47 @@
 
 	</section>
 
+	<section id="contato" class="contato">
+		<div class="contato-card">
+			<h1>Entre em contato</h1>
+			<ul>
+				<li><i data-feather="coffee"></i> Rua Lorem Epsium, 100</li>
+				<li><i data-feather="coffee"></i> contato@projectfuji.com</li>
+				<li><i data-feather="coffee"></i> +55 14 99999-9999</li>
+			</ul>
+		</div>
+		<div id="map"></div>
+	</section>
+
 	<script>
 		feather.replace();
+
+		document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+			anchor.addEventListener('click', function (e) {
+				e.preventDefault();
+
+				document.querySelector(this.getAttribute('href')).scrollIntoView({
+					behavior: 'smooth'
+				});
+			});
+		});
+
+		function initMap() {
+			// The location of Uluru
+			const uluru = { lat: -19.924108, lng: -43.943470 };
+			// The map, centered at Uluru
+			const map = new google.maps.Map(document.getElementById("map"), {
+				zoom: 4,
+				center: uluru,
+			});
+			// The marker, positioned at Uluru
+			const marker = new google.maps.Marker({
+				position: uluru,
+				map: map,
+			});
+		}
 	</script>
+	<script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async></script>
 
 </body>
 

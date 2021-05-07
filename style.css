@@ -10,6 +10,15 @@ body {
 	overflow-x: hidden;
 }
 
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+ul {
+	list-style: none;
+}
+
 header {
 	height: calc(100vh - 150px);
 	background: no-repeat center/cover url('assets/header-image.jpg');
@@ -51,7 +60,7 @@ button {
 	border-radius: 8px;
 	font-weight: bold;
 	border: 0;
-	background: #762a2e;
+	background: #1d61dd;
 	color: white;
 	font-family: 'Montserrat', sans-serif;
 	cursor: pointer;
@@ -207,11 +216,75 @@ button {
 	background: #1d61dd;
 }
 
+#map {
+	height: 400px;
+	/* The height is 400 pixels */
+	width: 100%;
+	/* The width is the width of the web page */
+}
+
+.contato {
+	padding: 60px;
+	position: relative;
+	background: #DEE4F8;
+}
+
+.contato .contato-card {
+	width: 350px;
+	height: 300px;
+	position: absolute;
+	background: white;
+	border-radius: 8px;
+	z-index: 99;
+	top: calc(50% - 150px);
+	left: calc(20% - 175px);
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+}
+
+.contato .contato-card h1 {
+	padding-left: 50px;
+	text-align: left;
+}
+
+.contato .contato-card li {
+	font-size: .8rem;
+	font-weight: bold;
+	color: grey;
+	display: flex;
+	align-items: center;
+}
+
+.contato .contato-card li svg {
+	width: 16px;
+	margin: 10px;
+}
+
 /* Responsividade */
 
-/* Tablets */
+/* especial para o mapa */
 
-@media (max-width: 767px) {}
+@media (max-width: 950px) {
+	.contato {
+		padding: 60px 0;
+	}
+	.contato .contato-card {
+		left: 40px;
+	}
+}
+
+@media (max-width: 800px) {
+	.contato {
+		padding: 30px 0;
+	}
+	.contato .contato-card {
+		position: static;
+		margin: 40px auto;
+	}
+}
 
 /* Celular e afins */
 
@@ -238,5 +311,12 @@ button {
 	header nav p {
 		width: 100%;
 		text-align: center;
+	}
+	.contato {
+		padding: 20px 0;
+	}
+	.contato .contato-card {
+		position: static;
+		margin: 40px auto;
 	}
 }
