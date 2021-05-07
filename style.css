@@ -71,6 +71,14 @@ button {
 	padding: 15px;
 }
 
+.pacotes .pacotes-cards .card:hover {
+	transform: scale(1.1);
+}
+
+.pacotes .pacotes-cards .card {
+	transition: transform 330ms ease-in-out;
+}
+
 .pacotes .pacotes-cards {
 	display: flex;
 	max-width: 950px;
