@@ -66,6 +66,14 @@ button {
 	cursor: pointer;
 }
 
+button:hover {
+	transform: scale(1.1);
+}
+
+button {
+	transition: transform 330ms ease-in-out;
+}
+
 .pacotes {
 	background: #DEE4F8;
 	padding: 15px;
